@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<meta charset="UTF-8"> 
 <html>
 <head>
+	<meta charset="UTF-8"> 
 	<title>Curso Platzi - React.js</title>
+	<script src="https://fb.me/react-0.14.3.js"></script>
+	<script src="https://fb.me/react-dom-0.14.3.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 </head>
 <body>
 	<section id="container">
 		
 	</section>
-	<script type="text/javascript" src="http://fb.me/react-0.13.3.js"></script>
-	<script type="text/javascript" src="http://fb.me/JSXTransformer-0.13.3.js"></script>
-	<script type="text/jsx;harmony=true">
+	
+	<script type="text/babel">
 		class HelloWordComponent extends React.Component{
 			render(){
 				return <h1>¡Hola {this.props.name}!</h1>;
 			}
 		};
 
-		React.render(<HelloWordComponent name="Alfonso" />, document.getElementById('container'));
+		ReactDOM.render(<HelloWordComponent name="Alfonso" />, document.getElementById('container'));
 
 		setTimeout(() => {
-			React.render(<HelloWordComponent name="Robert" />, document.getElementById('container'));
+			ReactDOM.render(<HelloWordComponent name="Robert" />, document.getElementById('container'));
 		}, 3000);
 	</script>
 </body>
