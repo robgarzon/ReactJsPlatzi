@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<meta charset="UTF-8"> 
+<html>
+<head>
+	<title>Curso Platzi - React.js</title>
+</head>
+<body>
+	<section id="container">
+		
+	</section>
+	<script type="text/javascript" src="http://fb.me/react-0.13.3.js"></script>
+	<script type="text/javascript" src="http://fb.me/JSXTransformer-0.13.3.js"></script>
+	<script type="text/jsx;harmony=true">
+		class HelloWordComponent extends React.Component{
+			render(){
+				return <h1>¡Hola {this.props.name}!</h1>;
+			}
+		};
+
+		React.render(<HelloWordComponent name="Alfonso" />, document.getElementById('container'));
+
+		setTimeout(() => {
+			React.render(<HelloWordComponent name="Robert" />, document.getElementById('container'));
+		}, 3000);
+	</script>
+</body>
+</html>
